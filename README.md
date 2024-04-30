@@ -11,25 +11,24 @@ Australia Tax Income Visualizer is a web-based application designed to calculate
 ## Technology Stack
 - **Backend**: Python, Flask
 - **API**: Custom Flask API for income calculation
-- 
 ## Installation Guide
 
 ### Prerequisites
 Ensure you have Python 3 and Node.js installed on your machine.
 
-### Install Dependencies
-# Install Python Flask
+## Install Dependencies
+#### Install Python Flask
 pip install Flask
 
-# Install Flask-CORS (required for cross-origin resource sharing)
+#### Install Flask-CORS (required for cross-origin resource sharing)
 pip install Flask-CORS
 
-# Install JavaScript dependencies
+#### Install JavaScript dependencies
 npm install
 
-### Run the Application
-# Run the Flask backend
+## Run the Application
+#### Run the Flask backend
 python app.py
 
-# If there's a separate frontend server, start it as follows
+#### If there's a separate frontend server, start it as follows
 npm start
