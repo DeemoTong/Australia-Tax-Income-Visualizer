@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>税后收入图表</title>
+        <title>Tax After Income</title>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     </head>
 
     <body>
+        <select id="year">
+            <option value="2023">2023-24</option>
+            <option value="2022">2022-23</option>
+            <option value="2021">2021-22</option>
+        </select>
         <canvas id="incomeChart" width="800" height="400"></canvas>
         <br>
         <canvas id="differenceChart" width="800" height="400"></canvas>
