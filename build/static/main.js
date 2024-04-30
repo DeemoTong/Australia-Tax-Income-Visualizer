@@ -133,7 +133,7 @@ selectYearElement.addEventListener('change', function () {
                     plugins: {
                         title: {
                             display: true,
-                            text: `${selectedYear} Income Difference`,
+                            text: `${selectedYear} After-tax Income`,
                             font: {
                                 size: 24, 
                                 family: 'Arial',
