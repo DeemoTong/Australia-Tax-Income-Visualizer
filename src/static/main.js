@@ -10,11 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 selectYearElement.addEventListener('change', function () {
     const selectedYear = selectYearElement.value;
-    axios.get('http://localhost:5000/tax_post_income', {
-            params: {
-                year: selectedYear
-            }
-        })
+    const url = `./tax_post_income/${selectedYear}.json`; 
+    axios.get(url)
         .then(function (response) {
             const data = {
                 labels: Object.keys(response.data),
@@ -52,6 +49,15 @@ selectYearElement.addEventListener('change', function () {
                         }
                     },
                     plugins: {
+                        title: {
+                            display: true,
+                            text: `${selectedYear} After-tax Income`,
+                            font: {
+                                size: 24, 
+                                family: 'Arial',
+                                weight: 'bold' 
+                            }
+                        },
                         tooltip: {
                             mode: 'index',
                             intersect: false,
@@ -94,7 +100,7 @@ selectYearElement.addEventListener('change', function () {
             const differenceData = {
                 labels: Object.keys(response.data),
                 datasets: [{
-                    label: 'Income Difference',
+                    label: `${selectedYear} Income Difference`,
                     backgroundColor: 'rgba(255, 206, 86, 0.2)',
                     borderColor: 'rgba(255, 206, 86, 1)',
                     data: Object.keys(response.data).map(income => income - response.data[income]),
@@ -125,6 +131,15 @@ selectYearElement.addEventListener('change', function () {
                         }
                     },
                     plugins: {
+                        title: {
+                            display: true,
+                            text: `${selectedYear} Income Difference`,
+                            font: {
+                                size: 24, 
+                                family: 'Arial',
+                                weight: 'bold' 
+                            }
+                        },
                         tooltip: {
                             mode: 'index',
                             intersect: false,
