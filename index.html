@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tax After Income</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <style>
+            select {
+                height: 50px; 
+                font-size: 20px; 
+                padding: 5px 10px; 
+                border-radius: 8px; 
+                border: 2px solid #ccc; 
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+                cursor: pointer; 
+            }
+
+            select:focus {
+                outline: none; 
+                border-color: #007BFF;
+                box-shadow: 0 0 8px rgba(0,123,255,0.5); 
+            }
+        </style>
+    </head>
+
+    <body>
+        <select id="year">
+            <option value="2023">2023-24</option>
+            <option value="2022">2022-23</option>
+            <option value="2021">2021-22</option>
+        </select>
+        <canvas id="incomeChart" width="800" height="400"></canvas>
+        <br>
+        <canvas id="differenceChart" width="800" height="400"></canvas>
+        <script src="/static/main.js"></script>
+    </body>
+</html >
