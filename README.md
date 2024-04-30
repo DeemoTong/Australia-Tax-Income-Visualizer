@@ -1,5 +1,6 @@
 # Australia Tax Income Visualizer
-
+Preview Link:
+[Australia Tax Income Visualizer](https://deemotong.github.io/Australia-Tax-Income-Visualizer/)
 ## Project Description
 Australia Tax Income Visualizer is a web-based application designed to calculate after-tax income in Australia and display interactive charts for different income levels. The aim is to provide users with a clear visualization of after-tax income, helping them better understand the tax system in Australia.
 
